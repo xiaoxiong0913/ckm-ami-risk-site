@@ -2,6 +2,8 @@
 
 Public-facing CKM-AMI risk calculator and reporting atlas bundle.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/xiaoxiong0913/ckm-ami-risk-site)
+
 ## Runtime
 
 - Framework: Flask
