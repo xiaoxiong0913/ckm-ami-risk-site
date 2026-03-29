@@ -1,0 +1,17 @@
+section,title,path
+supplementary_figure,Supplementary Figure 1 detailed missingness overview,assets/figures/Supplementary Figure 1 detailed missingness overview.png
+supplementary_figure,Supplementary Figure 2 repeated cross validation comparison,assets/figures/Supplementary Figure 2 repeated cross validation comparison.png
+supplementary_figure,Supplementary Figure 3 strict and adapted ckm stage distribution,assets/figures/Supplementary Figure 3 strict and adapted ckm stage distribution.png
+supplementary_figure,Supplementary Figure 4 subgroup robustness,assets/figures/Supplementary Figure 4 subgroup robustness.png
+supplementary_figure,Supplementary Figure 5 sensitivity model comparison,assets/figures/Supplementary Figure 5 sensitivity model comparison.png
+supplementary_figure,Supplementary Figure 6 threshold utility detail,assets/figures/Supplementary Figure 6 threshold utility detail.png
+supplementary_figure,Supplementary Figure 7 full feature correlation heatmap,assets/figures/Supplementary Figure 7 full feature correlation heatmap.png
+supplementary_figure,Supplementary Figure 8 calibration detail panels,assets/figures/Supplementary Figure 8 calibration detail panels.png
+supplementary_table,Table S1 strict aha stage distribution,assets/tables/Table S1 strict aha stage distribution.csv
+supplementary_table,Table S2 development missingness summary,assets/tables/Table S2 development missingness summary.csv
+supplementary_table,Table S3 external missingness summary,assets/tables/Table S3 external missingness summary.csv
+supplementary_table,Table S4 repeated cross validation metrics,assets/tables/Table S4 repeated cross validation metrics.csv
+supplementary_table,Table S5 subgroup robustness summary,assets/tables/Table S5 subgroup robustness summary.csv
+supplementary_table,Table S6 sensitivity model comparison,assets/tables/Table S6 sensitivity model comparison.csv
+supplementary_table,Table S7 variable dictionary mapping,assets/tables/Table S7 variable dictionary mapping.csv
+supplementary_table,Table S8 champion model ranking rationale,assets/tables/Table S8 champion model ranking rationale.csv

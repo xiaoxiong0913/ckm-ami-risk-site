@@ -1,0 +1,402 @@
+{
+  "site": {
+    "title": "CKM-AMI champion model public calculator",
+    "language": "en",
+    "headline": "XGBoost emerged as the externally selected deployment model for ICU AMI risk estimation.",
+    "subheadline": "HF-aligned CKM-AMI atlas with workflow, screening, six-model comparison, calibration, SHAP context, and clinical translation.",
+    "summary": "The API contract remains stable while the runtime is switched from the old logistic-only demo to the externally selected champion model."
+  },
+  "hero": {
+    "conclusion": "The adjusted CKM logistic model remains in the manuscript for odds-ratio reporting, whereas SHAP, Figure 4-6, and the calculator now follow the champion model.",
+    "metrics": [
+      {
+        "label": "Development cohort",
+        "value": 7086,
+        "detail": "MIMIC-IV"
+      },
+      {
+        "label": "External validation cohort",
+        "value": 8353,
+        "detail": "eICU-CRD"
+      },
+      {
+        "label": "Champion model",
+        "value": "XGBoost",
+        "detail": "External AUROC-first selection"
+      },
+      {
+        "label": "Development AUROC",
+        "value": 0.8592,
+        "detail": "XGBoost"
+      },
+      {
+        "label": "External AUROC",
+        "value": 0.7687,
+        "detail": "XGBoost"
+      },
+      {
+        "label": "External AUPRC",
+        "value": 0.2505,
+        "detail": "XGBoost"
+      },
+      {
+        "label": "CKM logistic OR",
+        "value": 0.9,
+        "detail": "95% CI 0.80-1.02"
+      },
+      {
+        "label": "Calibration",
+        "value": "-1.338 / 0.625",
+        "detail": "Intercept / slope"
+      }
+    ]
+  },
+  "key_findings": [
+    "The main-text figure system now follows the HF-style order of workflow, screening, discrimination, calibration/DCA, interpretation, and web translation.",
+    "XGBoost was selected by external AUROC-first ranking with fixed tie-breaks using Brier, calibration distance, and AUPRC.",
+    "The public calculator keeps GET /api/config and POST /api/predict unchanged while replacing the probability engine with the champion model.",
+    "The adjusted CKM logistic model stays in the manuscript as the inferential OR table rather than the only deployment model."
+  ],
+  "main_figures": [
+    {
+      "title": "Figure 1. Study workflow and cohort derivation",
+      "caption": "Two-database workflow from cohort derivation to web translation.",
+      "src": "assets/figures/Figure 1 study workflow and cohort derivation.png",
+      "download_png": "assets/figures/Figure 1 study workflow and cohort derivation.png",
+      "download_tif": "assets/figures/Figure 1 study workflow and cohort derivation.tif"
+    },
+    {
+      "title": "Figure 2. Feature taxonomy, missingness, and LASSO screening",
+      "caption": "Feature taxonomy, missingness, and LASSO path plus cross-validation.",
+      "src": "assets/figures/Figure 2 feature taxonomy missingness and lasso screening.png",
+      "download_png": "assets/figures/Figure 2 feature taxonomy missingness and lasso screening.png",
+      "download_tif": "assets/figures/Figure 2 feature taxonomy missingness and lasso screening.tif"
+    },
+    {
+      "title": "Figure 3. Discrimination across six candidate models",
+      "caption": "Development and external ROC and PR comparison across six models.",
+      "src": "assets/figures/Figure 3 discrimination across six candidate models.png",
+      "download_png": "assets/figures/Figure 3 discrimination across six candidate models.png",
+      "download_tif": "assets/figures/Figure 3 discrimination across six candidate models.tif"
+    },
+    {
+      "title": "Figure 4. Champion model calibration and decision-curve analysis",
+      "caption": "Calibration and DCA for the externally selected champion model.",
+      "src": "assets/figures/Figure 4 champion model calibration and decision curve.png",
+      "download_png": "assets/figures/Figure 4 champion model calibration and decision curve.png",
+      "download_tif": "assets/figures/Figure 4 champion model calibration and decision curve.tif"
+    },
+    {
+      "title": "Figure 5. Champion model SHAP interpretation and performance context",
+      "caption": "Global explanation, beeswarm, correlation, and external performance context.",
+      "src": "assets/figures/Figure 5 champion model shap and performance context.png",
+      "download_png": "assets/figures/Figure 5 champion model shap and performance context.png",
+      "download_tif": "assets/figures/Figure 5 champion model shap and performance context.tif"
+    },
+    {
+      "title": "Figure 6. Web calculator interface",
+      "caption": "Manuscript-aligned champion-model clinical calculator.",
+      "src": "assets/figures/Figure 6 web calculator interface.png",
+      "download_png": "assets/figures/Figure 6 web calculator interface.png",
+      "download_tif": "assets/figures/Figure 6 web calculator interface.tif"
+    }
+  ],
+  "main_tables": [
+    {
+      "title": "Baseline characteristics across development and external cohorts",
+      "description": "Baseline characteristics across development and external cohorts",
+      "src": "assets/tables/Table 1 baseline characteristics across development and external cohorts.csv"
+    },
+    {
+      "title": "Feature taxonomy and final predictor mapping",
+      "description": "Feature taxonomy and final predictor mapping",
+      "src": "assets/tables/Table 2 feature taxonomy and final predictor mapping.csv"
+    },
+    {
+      "title": "Six-model performance in development and external validation",
+      "description": "Six-model performance in development and external validation",
+      "src": "assets/tables/Table 3 six model performance in development and external validation.csv"
+    },
+    {
+      "title": "Adjusted odds ratios for the CKM logistic model",
+      "description": "Adjusted odds ratios for the CKM logistic model",
+      "src": "assets/tables/Table 4 adjusted odds ratios for the ckm logistic model.csv"
+    }
+  ],
+  "supplementary_atlas": {
+    "figure_count": 8,
+    "table_count": 8,
+    "figures": [
+      {
+        "title": "Supplementary Figure 1 detailed missingness overview",
+        "description": "Supplementary Figure 1 detailed missingness overview",
+        "src": "assets/figures/Supplementary Figure 1 detailed missingness overview.png"
+      },
+      {
+        "title": "Supplementary Figure 2 repeated cross validation comparison",
+        "description": "Supplementary Figure 2 repeated cross validation comparison",
+        "src": "assets/figures/Supplementary Figure 2 repeated cross validation comparison.png"
+      },
+      {
+        "title": "Supplementary Figure 3 strict and adapted ckm stage distribution",
+        "description": "Supplementary Figure 3 strict and adapted ckm stage distribution",
+        "src": "assets/figures/Supplementary Figure 3 strict and adapted ckm stage distribution.png"
+      },
+      {
+        "title": "Supplementary Figure 4 subgroup robustness",
+        "description": "Supplementary Figure 4 subgroup robustness",
+        "src": "assets/figures/Supplementary Figure 4 subgroup robustness.png"
+      },
+      {
+        "title": "Supplementary Figure 5 sensitivity model comparison",
+        "description": "Supplementary Figure 5 sensitivity model comparison",
+        "src": "assets/figures/Supplementary Figure 5 sensitivity model comparison.png"
+      },
+      {
+        "title": "Supplementary Figure 6 threshold utility detail",
+        "description": "Supplementary Figure 6 threshold utility detail",
+        "src": "assets/figures/Supplementary Figure 6 threshold utility detail.png"
+      },
+      {
+        "title": "Supplementary Figure 7 full feature correlation heatmap",
+        "description": "Supplementary Figure 7 full feature correlation heatmap",
+        "src": "assets/figures/Supplementary Figure 7 full feature correlation heatmap.png"
+      },
+      {
+        "title": "Supplementary Figure 8 calibration detail panels",
+        "description": "Supplementary Figure 8 calibration detail panels",
+        "src": "assets/figures/Supplementary Figure 8 calibration detail panels.png"
+      }
+    ],
+    "tables": [
+      {
+        "title": "Table S1 strict aha stage distribution",
+        "description": "Table S1 strict aha stage distribution",
+        "src": "assets/tables/Table S1 strict aha stage distribution.csv"
+      },
+      {
+        "title": "Table S2 development missingness summary",
+        "description": "Table S2 development missingness summary",
+        "src": "assets/tables/Table S2 development missingness summary.csv"
+      },
+      {
+        "title": "Table S3 external missingness summary",
+        "description": "Table S3 external missingness summary",
+        "src": "assets/tables/Table S3 external missingness summary.csv"
+      },
+      {
+        "title": "Table S4 repeated cross validation metrics",
+        "description": "Table S4 repeated cross validation metrics",
+        "src": "assets/tables/Table S4 repeated cross validation metrics.csv"
+      },
+      {
+        "title": "Table S5 subgroup robustness summary",
+        "description": "Table S5 subgroup robustness summary",
+        "src": "assets/tables/Table S5 subgroup robustness summary.csv"
+      },
+      {
+        "title": "Table S6 sensitivity model comparison",
+        "description": "Table S6 sensitivity model comparison",
+        "src": "assets/tables/Table S6 sensitivity model comparison.csv"
+      },
+      {
+        "title": "Table S7 variable dictionary mapping",
+        "description": "Table S7 variable dictionary mapping",
+        "src": "assets/tables/Table S7 variable dictionary mapping.csv"
+      },
+      {
+        "title": "Table S8 champion model ranking rationale",
+        "description": "Table S8 champion model ranking rationale",
+        "src": "assets/tables/Table S8 champion model ranking rationale.csv"
+      }
+    ]
+  },
+  "calculator": {
+    "model_name": "Champion model: XGBoost",
+    "version_note": "Locked runtime exported from the externally selected XGBoost package.",
+    "inputs": [
+      {
+        "key": "ckm_stage_adapted",
+        "label": "Adapted CKM stage",
+        "type": "choice",
+        "default": "A3",
+        "options": [
+          {
+            "label": "A0",
+            "value": "A0"
+          },
+          {
+            "label": "A1",
+            "value": "A1"
+          },
+          {
+            "label": "A2",
+            "value": "A2"
+          },
+          {
+            "label": "A3",
+            "value": "A3"
+          }
+        ],
+        "mapping": {
+          "A0": 0,
+          "A1": 1,
+          "A2": 2,
+          "A3": 3
+        }
+      },
+      {
+        "key": "age",
+        "label": "Age",
+        "type": "number",
+        "default": 70,
+        "min": 18,
+        "max": 91,
+        "step": 1
+      },
+      {
+        "key": "sex",
+        "label": "Administrative sex",
+        "type": "choice",
+        "default": "M",
+        "options": [
+          {
+            "label": "Male",
+            "value": "M"
+          },
+          {
+            "label": "Female",
+            "value": "F"
+          }
+        ],
+        "mapping": {
+          "M": 0,
+          "F": 1
+        }
+      },
+      {
+        "key": "bmi_or_proxy",
+        "label": "BMI or proxy",
+        "type": "number",
+        "default": 27.7,
+        "min": 15.0,
+        "max": 60.0,
+        "step": 0.1
+      },
+      {
+        "key": "hypertension_flag",
+        "label": "Hypertension history",
+        "type": "binary",
+        "default": 0
+      },
+      {
+        "key": "diabetes_flag",
+        "label": "Diabetes history",
+        "type": "binary",
+        "default": 0
+      },
+      {
+        "key": "hyperlipidemia_flag",
+        "label": "Hyperlipidemia history",
+        "type": "binary",
+        "default": 1
+      },
+      {
+        "key": "renal_history_flag",
+        "label": "Renal history",
+        "type": "binary",
+        "default": 0
+      },
+      {
+        "key": "baseline_creatinine",
+        "label": "Baseline creatinine",
+        "type": "number",
+        "default": 1.0,
+        "min": 0.1,
+        "max": 10.0,
+        "step": 0.1
+      },
+      {
+        "key": "glucose",
+        "label": "Glucose",
+        "type": "number",
+        "default": 152.0,
+        "min": 40.0,
+        "max": 600.0,
+        "step": 1.0
+      },
+      {
+        "key": "sbp",
+        "label": "Systolic blood pressure",
+        "type": "number",
+        "default": 113.0,
+        "min": 60.0,
+        "max": 220.0,
+        "step": 1.0
+      },
+      {
+        "key": "hf_flag",
+        "label": "Heart failure history",
+        "type": "binary",
+        "default": 0
+      },
+      {
+        "key": "af_flag",
+        "label": "Atrial fibrillation history",
+        "type": "binary",
+        "default": 0
+      },
+      {
+        "key": "stroke_pad_flag",
+        "label": "Stroke or PAD history",
+        "type": "binary",
+        "default": 0
+      }
+    ],
+    "thresholds": {
+      "low": 0.06,
+      "high": 0.17
+    },
+    "risk_bands": [
+      {
+        "label": "Low",
+        "probability_range": "< 0.06",
+        "sample_size": 2922,
+        "events": 53,
+        "event_rate": 0.0181
+      },
+      {
+        "label": "Intermediate",
+        "probability_range": "0.06 to < 0.17",
+        "sample_size": 2870,
+        "events": 186,
+        "event_rate": 0.0648
+      },
+      {
+        "label": "High",
+        "probability_range": ">= 0.17",
+        "sample_size": 2561,
+        "events": 501,
+        "event_rate": 0.1956
+      }
+    ],
+    "caution_note": "This calculator is a manuscript-aligned demonstration runtime and does not replace bedside judgment or local recalibration."
+  },
+  "downloads": [
+    {
+      "label": "Results summary",
+      "description": "Public-facing conclusion and core numbers.",
+      "href": "downloads/01 Results summary.md"
+    },
+    {
+      "label": "Methods note",
+      "description": "Short note on the fixed six-model workflow and champion selection.",
+      "href": "downloads/02 Methods note.md"
+    },
+    {
+      "label": "Supplementary atlas index",
+      "description": "Index of supplementary figures and tables.",
+      "href": "downloads/03 Supplementary atlas index.csv"
+    }
+  ]
+}
